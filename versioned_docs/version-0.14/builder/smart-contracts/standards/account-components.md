@@ -16,12 +16,12 @@ Use these components from Rust when you build accounts with the SDK, or import t
 | `BasicWallet` | Holding assets, receiving assets from standard notes, and moving assets into output notes. | `miden_standards::account::wallets` |
 | `BasicFungibleFaucet` | Minting and burning fungible assets from a regular faucet account. | `miden_standards::account::faucets` |
 | `NetworkFungibleFaucet` | Minting and burning fungible assets from a network-account faucet flow. | `miden_standards::account::faucets` |
-| `AuthSingleSig` | Authenticating transactions with one supported signature scheme. | `miden_standards::account::auth` |
+| `AuthSingleSig` | Single-signature authentication of transactions. | `miden_standards::account::auth` |
 | `AuthSingleSigAcl` | Single-signature authentication with an access-control list. | `miden_standards::account::auth` |
 | `AuthMultisig` | Threshold-based multisig authentication. | `miden_standards::account::auth` |
 | `AuthMultisigPsm` | Multisig with procedure-specific thresholds. | `miden_standards::account::auth` |
 | `NoAuth` | Accounts that intentionally skip transaction authentication. | `miden_standards::account::auth` |
-| `Ownable2Step` | Ownership transfer with an explicit accept step. | `miden_standards::account::access` |
+| `Ownable2Step` | Access control for account owners. | `miden_standards::account::access` |
 
 These are building blocks. They do not prevent you from adding custom components to the same account.
 
@@ -30,7 +30,7 @@ These are building blocks. They do not prevent you from adding custom components
 Most regular accounts need:
 
 - an authentication component, such as `AuthSingleSig` or `AuthMultisig`
-- a wallet component, usually `BasicWallet`
+- the `BasicWallet` component
 
 `AuthSingleSig` controls transaction authorization. `BasicWallet` exposes the standard wallet procedures used by common notes, including the ability to receive assets and move assets into output notes.
 
@@ -68,7 +68,7 @@ At the builder level, the practical rule is:
 - Add `BasicFungibleFaucet` or `NetworkFungibleFaucet` to faucet accounts that should mint or burn fungible assets.
 - Add auth components to every account that must reject unauthorized transactions.
 
-If you write a custom wallet component instead of using `BasicWallet`, match the expected interface deliberately and test consumption of the relevant standard notes.
+Prefer building on top of `BasicWallet`: compose it with a custom extension component for application-specific methods. If you replace the wallet interface entirely, test consumption of the relevant standard notes deliberately.
 
 ## Rust and MASM entry points
 

@@ -18,7 +18,7 @@ The v0.14 standards snapshot has two fungible faucet components.
 | `BasicFungibleFaucet` | A regular faucet account that mints and burns fungible assets. | `miden_standards::account::faucets` |
 | `NetworkFungibleFaucet` | A network-account faucet flow. | `miden_standards::account::faucets` |
 
-Public storage is typical for shared token faucets because clients can discover faucet state and metadata. Private storage is possible, but it changes who can observe the faucet's state.
+Public state is typical for shared token faucets because clients can discover faucet state, metadata, code, and vault changes. Private state is possible, but it changes who can observe the faucet.
 
 ```rust title="Create a basic fungible faucet account"
 use miden_protocol::Word;

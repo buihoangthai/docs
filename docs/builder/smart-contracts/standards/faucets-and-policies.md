@@ -5,7 +5,7 @@ description: "Build fungible token faucets and choose standard mint, burn, send,
 
 # Faucets and Policies
 
-In Miden, a token issuer is an account. A fungible faucet account can mint and burn the fungible asset identified by that faucet's account ID. The standard faucet components give builders a reusable way to create token issuers without hand-writing the entire faucet interface.
+In Miden, a token issuer is an account. The current `FungibleFaucet` component bundles token metadata with the standard mint and burn procedures, while the asset's composition is determined at the asset level by `AssetComposition`. The standard faucet components give builders a reusable way to create token issuers without hand-writing the entire faucet interface.
 
 Use this page when you need to create a faucet account, decide who can mint or burn, or understand how faucet behavior relates to standard notes.
 
@@ -22,9 +22,9 @@ The current standard fungible faucet component is `FungibleFaucet`.
 | Rust component | `miden_standards::account::faucets::FungibleFaucet` |
 | Rust builder/helper | `FungibleFaucetBuilder`, `create_fungible_faucet` |
 | MASM component | `miden::standards::faucets::fungible` |
-| Account type | `FungibleFaucet` account |
+| Account role | Faucet account whose account ID identifies the issuer. |
 
-Public storage is typical for shared token faucets because clients can discover faucet state and metadata. Private storage is possible, but it changes who can observe the faucet's state.
+Public state is typical for shared token faucets because clients can discover faucet state, metadata, code, and vault changes. Private state is possible, but it changes who can observe the faucet.
 
 ```rust title="Create a fungible faucet with allow-all policies"
 use miden_protocol::Word;
@@ -89,7 +89,8 @@ A fungible asset is tied to its faucet account ID. The faucet's metadata describ
 | Symbol | Short token symbol. |
 | Decimals | Display precision for client UX. |
 | Max supply | Upper bound enforced by the faucet component. |
-| Metadata | Optional display fields such as token name, description, logo URI, and external link. |
+| Token name | Mandatory display name. |
+| Optional metadata | Optional display fields such as description, logo URI, and external link. |
 | Faucet account ID | The issuer ID used when constructing fungible assets and checking balances. |
 
 When an account checks its balance for a fungible token, it queries by the faucet account ID.
@@ -127,13 +128,15 @@ Burning is also note-based. A burn note returns assets to the faucet and execute
 
 Use `FungibleFaucet` when supply, metadata, minting, burning, and transfer policies match the standard pattern.
 
+Before writing a custom faucet, first check whether `TokenPolicyManager` plus a standard or custom policy component can express the rule. Custom policies can gate minting, burning, sending, and receiving without replacing the faucet component. For some minting flows, a custom mint note accepted by the faucet can move application-specific supply logic out of the faucet itself.
+
 Write a custom faucet component when:
 
-- Minting depends on application state, proofs, allowlists, or rate limits.
-- Supply policy is more complex than a fixed max supply and a standard authority check.
-- You need custom public methods beyond the standard faucet interface.
+- You need customized versions of the standard faucet procedures.
+- The asset issuance model cannot be expressed with `TokenPolicyManager`, custom policies, or custom mint notes.
+- The faucet's state model must differ from the standard metadata, supply, and policy layout.
 
-Even then, consider reusing standard auth, ownership, and wallet components where they fit. Custom faucet logic does not require custom authentication or custom note formats by default.
+If you only need additional public methods, compose the faucet account with an extension component instead of replacing `FungibleFaucet`. Even then, consider reusing standard auth, ownership, and wallet components where they fit. Custom faucet logic does not require custom authentication or custom note formats by default.
 
 ## Related pages
 
