@@ -196,6 +196,7 @@ const sidebars: SidebarsConfig = {
           label: "Clients",
           link: { type: "doc", id: "builder/tools/clients/index" },
           items: [
+            "builder/tools/clients/local-node-testing",
             {
               type: "category",
               label: "Rust",
