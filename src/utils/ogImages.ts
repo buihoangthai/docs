@@ -94,6 +94,11 @@ const OG_IMAGE_RULES: OgImageRule[] = [
     description: "Scripts, context, advice data, and execution patterns on Miden.",
   },
   {
+    pathPrefix: "/builder/smart-contracts/standards",
+    image: "miden-standards.png",
+    description: "Reusable account components, note scripts, faucets, and policy modules.",
+  },
+  {
     pathPrefix: "/builder/smart-contracts",
     image: "smart-contracts.png",
     description: "Write Miden account logic and notes in Rust or MASM.",

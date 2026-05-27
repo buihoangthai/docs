@@ -76,6 +76,14 @@ const images = [
     panel: "TX",
   },
   {
+    id: "miden-standards",
+    eyebrow: "Smart Contracts",
+    title: "Miden Standards",
+    description: "Reusable account components, note scripts, faucets, and policy modules.",
+    accent: "#ff5500",
+    panel: "STD",
+  },
+  {
     id: "tutorials",
     eyebrow: "Build",
     title: "Tutorials",
