@@ -23,7 +23,7 @@ flowchart TD
             BuilderMigration["builder/migration/"]
             BuilderFAQ["builder/faq.md"]
             BuilderGlossary["builder/glossary.md"]
-            CoreConceptsLanding["core-concepts/index.md"]
+            ReferenceLanding["core-concepts/index.md"]
         end
 
         subgraph VersionedDocs["versioned_docs/ (snapshots)"]
@@ -95,9 +95,9 @@ flowchart TD
 
 **`docs/` (current/next version)**
 - Get Started guides (`docs/builder/get-started/`)
-- Core Concepts, Smart Contracts, Reference (placeholders)
+- Reference and Smart Contracts placeholders
 - FAQ and Glossary
-- Landing pages for Builder and Core Concepts
+- Landing pages for Builder and Reference
 
 **`versioned_docs/` (frozen releases)**
 - Snapshots of `docs/` at release time
@@ -180,7 +180,7 @@ Deployment is **automatic** on push to `main`.
 The `.github/workflows/deploy-docs.yml` workflow:
 1. Checks out this repository and all external source repos
 2. Ingests external docs into v0.4 IA structure:
-   - Core Concepts docs → `docs/core-concepts/protocol/`, `miden-vm/`, `compiler/`, `node/`
+   - Reference docs → `docs/core-concepts/protocol/`, `miden-vm/`, `compiler/`, `node/`
    - Builder docs → `docs/builder/tutorials/`, `docs/builder/tools/client/`
 3. Runs `npm run build` to generate the static site
 4. Deploys to GitHub Pages at `docs.miden.xyz`
@@ -253,7 +253,7 @@ The site uses **Simple Analytics** for privacy-first, cookie-less metrics.
 ### Updating LLM-facing files
 
 Edit `static/llms.txt` and `static/skill.md` directly. Content should:
-- List canonical current entry points for Builder, clients, tutorials, Guardian, and Core Concepts
+- List canonical current entry points for Builder, clients, tutorials, Guardian, and Reference
 - Call out `/` as the latest stable docs and `/next/` as the current unstable docs
 - Avoid stale paths such as `builder/develop/` or old `miden-base` source links
 - Avoid "Polygon Miden" branding (use "Miden" only)

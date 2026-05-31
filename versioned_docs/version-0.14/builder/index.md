@@ -70,7 +70,7 @@ Accounts, notes, and transactions — authored in Rust, compiled to MASM, proved
 import SectionLinks from '@site/src/components/SectionLinks';
 
 <SectionLinks
-  title="Explore core concepts"
+  title="Explore the reference"
   links={[
     { href: '../core-concepts', label: 'Architecture overview', description: 'Actor model, state design, and protocol fundamentals' },
     { href: '../core-concepts#protocol', label: 'Protocol reference', description: 'Accounts, notes, state model, and transaction semantics' },

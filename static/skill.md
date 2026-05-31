@@ -19,7 +19,7 @@ metadata:
 - The default docs at `https://docs.miden.xyz/` are the latest stable docs, currently **0.14**.
 - The next-release docs are under `https://docs.miden.xyz/next/...` routes and are currently labeled **0.15 unstable**.
 - If a user asks about released behavior, check the matching versioned docs and release tag before answering.
-- If a user asks about current development, use `/next/builder/` or `/next/core-concepts/` docs and the relevant source repository branch.
+- If a user asks about current development, use `/next/builder/` or `/next/core-concepts/` reference docs and the relevant source repository branch.
 
 ## What Is Miden
 
@@ -34,7 +34,7 @@ Miden is a privacy-preserving blockchain where accounts are programmable smart c
 - **State is account-centric.** Accounts own storage, vault assets, code, and nonce; account updates can be processed independently.
 - **MASM is still relevant.** Rust smart contracts compile down to Miden Assembly, and some low-level account, note, and transaction logic is still authored or debugged in MASM.
 
-## Core Concepts
+## Protocol Building Blocks
 
 - **Accounts**: Smart contracts with ID, code, storage, vault, and nonce. Storage modes include private, public, and network account modes.
 - **Components**: Reusable account modules for storage, methods, authentication, wallet behavior, and application-specific logic.
@@ -60,9 +60,9 @@ Miden is a privacy-preserving blockchain where accounts are programmable smart c
 - Migration guide: https://docs.miden.xyz/builder/migration/
 - Guardian docs: https://docs.miden.xyz/builder/miden-guardian/
 
-## Core Concepts Map
+## Reference Map
 
-- Core concepts: https://docs.miden.xyz/core-concepts/
+- Reference: https://docs.miden.xyz/core-concepts/
 - Protocol: https://docs.miden.xyz/core-concepts/protocol/
 - Protocol account model: https://docs.miden.xyz/core-concepts/protocol/account/
 - Protocol notes: https://docs.miden.xyz/core-concepts/protocol/note

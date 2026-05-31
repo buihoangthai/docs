@@ -149,7 +149,7 @@ const config: Config = {
             redirects.push("/builder/tools/explorer");
           }
 
-          // Core Concepts section: redirect old root-level paths to new /core-concepts/ paths
+          // Reference section: redirect old root-level paths to stable /core-concepts/ paths
           if (existingPath.startsWith("/core-concepts/protocol")) {
             redirects.push(existingPath.replace("/core-concepts/protocol", "/miden-base"));
             // Also redirect old nested path
@@ -287,7 +287,7 @@ const config: Config = {
           {
             type: "docSidebar",
             sidebarId: "coreConceptsSidebar",
-            label: "Core Concepts",
+            label: "Reference",
             position: "left",
           },
 
@@ -349,7 +349,7 @@ const config: Config = {
             ],
           },
           {
-            title: "Concepts",
+            title: "Reference",
             items: [
               { label: "Overview", to: "/core-concepts" },
               { label: "Protocol", to: "/core-concepts/protocol" },
