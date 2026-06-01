@@ -105,6 +105,10 @@ A fundamental module of the Miden VM that acts as a base layer, providing core f
 
 Responsible for generating zero-knowledge proofs that attest to the correctness of program execution without revealing the underlying data.
 
+### Miden Operator
+
+An entity that runs the node infrastructure powering the Miden network. Operators verify transaction proofs, record created notes and consumed-note nullifiers in the state databases, build the batches and blocks that progress the chain, and execute network transactions on behalf of users (for example, consuming a note against a public DEX contract).
+
 ### Miden Assembly
 
 An assembly language specifically designed for the Miden VM — a low-level language with specialized instructions optimized for zero-knowledge proof generation.
