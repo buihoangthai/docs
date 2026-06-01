@@ -45,7 +45,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={siteConfig.title}
-      description="Build verifiable, private applications on Miden — a zk-first Layer 1 with client-side proving and native privacy."
+      description="Build verifiable, private applications on Miden — a zk-first layer 2 with client-side proving and native privacy."
     >
       <main className={styles.page}>
         {/* ---- HERO ---- */}
