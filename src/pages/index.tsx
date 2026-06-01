@@ -45,7 +45,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={siteConfig.title}
-      description="Build verifiable, private applications on Miden — a zk-first Layer 1 with client-side proving and native privacy."
+      description="Build verifiable, private applications on Miden — a zk-first layer 2 with client-side proving and native privacy."
     >
       <main className={styles.page}>
         {/* ---- HERO ---- */}
@@ -54,15 +54,15 @@ export default function Home(): JSX.Element {
             <div>
               <div className={styles.eyebrow}>
                 <span className={styles.eyebrowDot} aria-hidden="true" />
-                Private by design · Verifiable by default
+                Private by default · Scalable by design
               </div>
               <h1 className={styles.heroTitle}>
                 Build scalable, private applications.
               </h1>
               <p className={styles.heroSub}>
-                A zero-knowledge rollup with client-side proving.
+                A zero-knowledge layer 2 with client-side proving.
                 Accounts and notes are private by default — only
-                commitments go on-chain.
+                commitments go onchain.
               </p>
               <div className={styles.ctaRow}>
                 <Link
