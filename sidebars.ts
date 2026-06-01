@@ -45,13 +45,14 @@ const sidebars: SidebarsConfig = {
         "builder/smart-contracts/overview",
         {
           type: "category",
+          label: "MASM",
+          link: { type: "doc", id: "builder/smart-contracts/masm/index" },
+          items: [],
+        },
+        {
+          type: "category",
           label: "Rust",
-          link: {
-            type: "generated-index",
-            slug: "/builder/smart-contracts/rust",
-            title: "Rust Smart Contracts",
-            description: "Rust-first account, note, transaction, type, and composition docs.",
-          },
+          link: { type: "doc", id: "builder/smart-contracts/rust/index" },
           items: [
             {
               type: "category",
