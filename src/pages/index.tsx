@@ -62,7 +62,7 @@ export default function Home(): JSX.Element {
               <p className={styles.heroSub}>
                 A zero-knowledge layer 2 with client-side proving.
                 Accounts and notes are private by default — only
-                commitments go on-chain.
+                commitments go onchain.
               </p>
               <div className={styles.ctaRow}>
                 <Link

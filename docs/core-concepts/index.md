@@ -44,9 +44,9 @@ Miden is a zero-knowledge layer 2 that rethinks blockchain architecture. Instead
 
 | Principle | How Miden achieves it |
 |-----------|----------------------|
-| **Privacy** | Accounts and notes store only cryptographic commitments on-chain; full data remains with users |
+| **Privacy** | Accounts and notes store only cryptographic commitments onchain; full data remains with users |
 | **Parallelism** | Single-account transactions enable concurrent execution without contention |
-| **Scalability** | Client-side proving offloads computation; proof aggregation reduces on-chain verification |
+| **Scalability** | Client-side proving offloads computation; proof aggregation reduces onchain verification |
 | **Programmability** | A Turing-complete VM supports arbitrary smart contract logic in accounts and notes |
 
 <Steps>
@@ -88,7 +88,7 @@ Notes are programmable messages that transfer assets between accounts:
 - **Assets** — tokens transferred to the recipient
 - **Metadata** — sender, tag (for discovery), and auxiliary data
 
-Notes can be **public** (all data on-chain) or **private** (only a commitment stored). Private notes require off-chain communication between sender and recipient.
+Notes can be **public** (all data onchain) or **private** (only a commitment stored). Private notes require offchain communication between sender and recipient.
 
 ### State model
 

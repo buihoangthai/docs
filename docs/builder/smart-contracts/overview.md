@@ -121,7 +121,7 @@ If the assertion fails, the ZK circuit **cannot produce a valid proof**. This me
 - No state changes occur — it's as if the transaction never happened
 - The client gets an error explaining which assertion failed
 
-This is fundamentally different from Ethereum's `revert` — there's no on-chain transaction that fails. The proof simply doesn't exist if the execution is invalid.
+This is fundamentally different from Ethereum's `revert` — there's no onchain transaction that fails. The proof simply doesn't exist if the execution is invalid.
 
 ## Account types
 

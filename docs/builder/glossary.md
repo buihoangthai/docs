@@ -61,7 +61,7 @@ A multi-signature account on Miden that requires a configurable threshold (N-of-
 
 ### Note
 
-A fundamental data structure that represents an off-chain asset or a piece of information that can be transferred between accounts. Miden's UTXO-like model is designed around notes. **Output notes** are new notes created by a transaction; **input notes** are those consumed (spent) by a transaction.
+A fundamental data structure that represents an offchain asset or a piece of information that can be transferred between accounts. Miden's UTXO-like model is designed around notes. **Output notes** are new notes created by a transaction; **input notes** are those consumed (spent) by a transaction.
 
 ### Note script
 
