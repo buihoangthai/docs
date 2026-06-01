@@ -431,8 +431,8 @@ Use the correct values for note types:
 
 | Value | Type | Description |
 |-------|------|-------------|
-| 1 | Public | Note data is visible on-chain |
-| 2 | Private | Note data is hidden (only hash on-chain) |
+| 1 | Public | Note data is visible onchain |
+| 2 | Private | Note data is hidden (only hash onchain) |
 
 ```rust
 // In note inputs or when creating output notes
@@ -476,7 +476,7 @@ let p2id_script_root: Word = P2idNote::script().root();
 ```
 
 :::info Why Not Hardcode
-The native hash function changed from RPO to Poseidon2 in v0.14, so every MAST root — including the P2ID script's — is different from v0.13. Any hardcoded digest from v0.13 will fail a script-root check against v0.14. Reading the root from `P2idNote::script().root()` (or the active note's storage for on-chain code) keeps the contract resilient to future script changes.
+The native hash function changed from RPO to Poseidon2 in v0.14, so every MAST root — including the P2ID script's — is different from v0.13. Any hardcoded digest from v0.13 will fail a script-root check against v0.14. Reading the root from `P2idNote::script().root()` (or the active note's storage for onchain code) keeps the contract resilient to future script changes.
 :::
 
 ---

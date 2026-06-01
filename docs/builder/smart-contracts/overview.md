@@ -6,7 +6,7 @@ description: "Miden's execution model, account structure, note system, and trans
 
 # What is a Miden Smart Contract
 
-Miden is a ZK rollup where transactions execute on the client and only a cryptographic proof is submitted to the network. Every entity — wallets, contracts, faucets — is an account with code, storage, a vault, and a nonce. Assets move between accounts through notes, which act as programmable UTXOs. This page describes the execution model, account structure, note system, and transaction lifecycle. For a hands-on walkthrough, see the [Miden Bank Tutorial](../tutorials/miden-bank/).
+Miden is a zero-knowledge layer 2 where transactions execute on the client and only a cryptographic proof is submitted to the network. Every entity — wallets, contracts, faucets — is an account with code, storage, a vault, and a nonce. Assets move between accounts through notes, which act as programmable UTXOs. This page describes the execution model, account structure, note system, and transaction lifecycle. For a hands-on walkthrough, see the [Miden Bank Tutorial](../tutorials/miden-bank/).
 
 ## What makes Miden different
 
@@ -121,7 +121,7 @@ If the assertion fails, the ZK circuit **cannot produce a valid proof**. This me
 - No state changes occur — it's as if the transaction never happened
 - The client gets an error explaining which assertion failed
 
-This is fundamentally different from Ethereum's `revert` — there's no on-chain transaction that fails. The proof simply doesn't exist if the execution is invalid.
+This is fundamentally different from Ethereum's `revert` — there's no onchain transaction that fails. The proof simply doesn't exist if the execution is invalid.
 
 ## Account types
 
