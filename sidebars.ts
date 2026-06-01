@@ -45,6 +45,12 @@ const sidebars: SidebarsConfig = {
         "builder/smart-contracts/overview",
         {
           type: "category",
+          label: "MASM",
+          link: { type: "doc", id: "builder/smart-contracts/masm/index" },
+          items: [],
+        },
+        {
+          type: "category",
           label: "Rust",
           link: {
             type: "generated-index",
