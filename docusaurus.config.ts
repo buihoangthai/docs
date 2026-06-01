@@ -379,7 +379,7 @@ const config: Config = {
             ],
           },
         ],
-        copyright: `<span class="footer__tagline">Private by design · Verifiable by default</span><span class="footer__sep">·</span>© ${new Date().getFullYear()} Miden`,
+        copyright: `<span class="footer__tagline">Private by default · Scalable by design</span><span class="footer__sep">·</span>© ${new Date().getFullYear()} Miden`,
       },
     },
 };

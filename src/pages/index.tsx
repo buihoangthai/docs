@@ -54,7 +54,7 @@ export default function Home(): JSX.Element {
             <div>
               <div className={styles.eyebrow}>
                 <span className={styles.eyebrowDot} aria-hidden="true" />
-                Private by design · Verifiable by default
+                Private by default · Scalable by design
               </div>
               <h1 className={styles.heroTitle}>
                 Build scalable, private applications.
