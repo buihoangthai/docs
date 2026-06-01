@@ -7,13 +7,13 @@ pagination_prev: null
 
 <!--
 ARCHITECTURE NOTE:
-This landing page is the ONLY Core Concepts content in docs/.
-Full Core Concepts documentation (Protocol, VM, Compiler, Node) lives in versioned_docs/
+This landing page is the ONLY Reference content in docs/.
+Full Reference documentation (Protocol, VM, Compiler, Node) lives in versioned_docs/
 and is populated by ingestion from external source repositories.
 DO NOT add protocol documentation files here.
 -->
 
-# Miden Core Concepts
+# Miden Reference
 
 A technical reference for Miden's architecture: the protocol, the zkVM, the compiler toolchain, and the node.
 

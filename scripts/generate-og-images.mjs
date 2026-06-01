@@ -213,15 +213,15 @@ const images = [
   },
   {
     id: "core-concepts",
-    eyebrow: "Core Concepts",
-    title: "Core Concepts",
+    eyebrow: "Reference",
+    title: "Reference",
     description: "Technical foundations for the protocol, node, VM, and compiler.",
     accent: "#ff5500",
     panel: "SPEC",
   },
   {
     id: "protocol",
-    eyebrow: "Core Concepts",
+    eyebrow: "Reference",
     title: "Protocol",
     description: "Accounts, notes, transactions, proving, and state transition rules.",
     accent: "#ff5500",
@@ -237,7 +237,7 @@ const images = [
   },
   {
     id: "node",
-    eyebrow: "Core Concepts",
+    eyebrow: "Reference",
     title: "Node",
     description: "Network components, transaction flow, block production, and sync.",
     accent: "#ff5500",
@@ -253,7 +253,7 @@ const images = [
   },
   {
     id: "miden-vm",
-    eyebrow: "Core Concepts",
+    eyebrow: "Reference",
     title: "Miden VM",
     description: "The STARK-based virtual machine that executes Miden programs.",
     accent: "#ff5500",
@@ -301,7 +301,7 @@ const images = [
   },
   {
     id: "compiler",
-    eyebrow: "Core Concepts",
+    eyebrow: "Reference",
     title: "Compiler",
     description: "Compile Rust components into Miden Assembly and executable artifacts.",
     accent: "#ff5500",
